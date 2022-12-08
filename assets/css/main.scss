@@ -21,33 +21,35 @@ body {
     height: 100%;
     line-height: 1;
     font-family: 'Montserrat', Arial, sans-sarif;
-    font-size: 14px;
-    font-weight: 500;
-    color: #737373;
+    font-size: 16px;
+    font-weight: 400;
+    color: #333333;
+}
+
+.btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    // box-sizing: border-box;
+    border-radius: 0;
+    font-weight: 700;
+    font-size: 17px;
+    line-height: 135.3%;
+    letter-spacing: 0.01em;
+    color: #FFFFFF;
+    background: #F85A47;
+    transition: 0.5s all;
 }
 
 .header__title {
-    margin-bottom: 10px;
-    font-weight: 700;
+    font-weight: 600;
     font-size: 40px;
-    line-height: 143%;
-    text-align: center;
-    letter-spacing: 0.2px;
-    color: #252B42;
+    line-height: 137.5%;
+    color: #000000;
 
     @media (max-width: $md-width) {
         font-size: 32px;
     }
-}
-
-.header__description {
-    margin: 0;
-    font-weight: 500;
-    font-size: 14px;
-    line-height: 143%;
-    text-align: center;
-    letter-spacing: 0.2px;
-    color: #737373;
 }
 
 .visually-hidden {

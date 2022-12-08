@@ -1,7 +1,8 @@
 <template>
   <section class="header">
-    <div class="container">
-      <div class="header__body d-flex flex-column flex-md-row justify-content-md-between align-items-center">
+    <div class="header__body">
+      <div class="container">
+      <div class="header__content d-flex flex-column flex-md-row justify-content-md-between align-items-center">
         <a 
           href="#" 
           class="header__logo" 
@@ -40,7 +41,8 @@
           </ul>
         </nav>
       </div>    
-    </div>
+      </div>
+  </div>
   </section>
 </template>
 
@@ -87,9 +89,17 @@ export default {
 @import "@/assets/css/main.scss";
 
 .header {
-  position: relative;
-  min-height: 101px;
-  padding: 35px 0;
+  position: absolute; 
+  top: 0;
+  left: 0;
+  width: 100%;
+
+  .header__body {
+    position: relative; 
+    min-height: 101px;
+    padding: 35px 0;
+    z-index: 10000;
+  }
 
   .header__logo {
     text-decoration: none;
@@ -98,10 +108,6 @@ export default {
     line-height: 134.8%;
     color: #31353B;
     transition: 0.5s all;
-
-    &--open {
-      margin-bottom: 20px;
-    }
 
     &:hover {
       color: #5f5c70;
@@ -184,37 +190,35 @@ export default {
   }
 
   @media (max-width: $md-width) {
+    
+    .header__logo--open {
+        margin-bottom: 20px;
+    }
+
     .menu {
-      .menu__list {
-        &--open {
-          position: absolute;
-          top: 100px;
-          left: 0;
-          width: 100%;
-          column-gap: 0;
+      .menu__list--open {
+        position: absolute;
+        top: 100px;
+        left: 0;
+        width: 100%;
+        column-gap: 0;
 
-          &:first-child {
-            border-top: 1px solid #DADADA;
+        &:first-child {
+          border-top: 1px solid #DADADA;
 
-          }
         }
       }
 
-      .menu__item {
-        &--open {
-          padding: 10px 50px;
-          border-bottom: 1px solid #DADADA;
-        }
+      .menu__item--open {
+        padding: 10px 50px;
+        border-bottom: 1px solid #DADADA;
       }
 
-      .menu__link {
-        &--open {
-          
-          font-weight: 400;
-          font-size: 16px;
-          line-height: 130.8%;
-          color: #000000;
-        }
+      .menu__link-open {
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 130.8%;
+        color: #000000;
       }
     }
   }

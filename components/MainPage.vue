@@ -1,9 +1,13 @@
 <template>
-  
+    <main>
+        <PromoApp />
+    </main>
 </template>
 
 <script>
+import PromoApp from './main/PromoApp.vue';
 export default {
+    components: {PromoApp},
 
 }
 </script>
