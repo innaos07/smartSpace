@@ -1,13 +1,223 @@
 <template>
-  
+  <section class="header">
+    <div class="container">
+      <div class="header__body d-flex flex-column flex-md-row justify-content-md-between align-items-center">
+        <a 
+          href="#" 
+          class="header__logo" 
+          :class="{'header__logo--open' : isActive}">
+          SmartSpace
+        </a>
+
+        <div  
+          class="header__toggle menu-toggle d-md-none" 
+          @click="isActive = !isActive"
+        >
+          <span class="menu-toggle__element"></span>
+        </div>
+
+        <nav class="header__menu menu d-none d-md-block">
+          <ul class="menu__list d-flex flex-wrap">
+            <li 
+              class="menu__item" 
+              v-for="item in MenuList" 
+              :key="item.name"
+            >
+              <a href="item.link" class="menu__link">{{item.name}}</a>
+            </li>
+          </ul>
+        </nav>
+
+        <nav class="header__menu menu d-md-none">
+          <ul 
+            class="menu__list d-flex flex-column flex-wrap" 
+            v-if="isActive" 
+            :class="{'menu__list--open' : isActive}"
+          >
+            <li class="menu__item" :class="{'menu__item--open' : isActive}" v-for="item in MenuList" :key="item.name">
+              <a href="item.link" class="menu__link" :class="{'menu__link--open' : isActive}">{{item.name}}</a>
+            </li>
+          </ul>
+        </nav>
+      </div>    
+    </div>
+  </section>
 </template>
 
 <script>
 export default {
+  data () {
+    return {
+      isActive: false,
+      MenuList: [
+        {
+          name: "Home",
+          link: "#",
+        },
+        {
+          name: "About",
+          link: "#",
+        },
+        {
+          name: "Service",
+          link: "#",
+        },
+        {
+          name: "Portfolio",
+          link: "#",
+        },
+        {
+          name: "Blog",
+          link: "#",
+        },
+        {
+          name: "Contact",
+          link: "#",
+        },
+
+      ],
+    }
+  }
 
 }
 </script>
 
-<style>
+<style lang="scss">
+@import "bootstrap/dist/css/bootstrap.css";
+@import "@/assets/css/main.scss";
+
+.header {
+  position: relative;
+  min-height: 101px;
+  padding: 35px 0;
+
+  .header__logo {
+    text-decoration: none;
+    font-weight: 800;
+    font-size: 23px;
+    line-height: 134.8%;
+    color: #31353B;
+    transition: 0.5s all;
+
+    &--open {
+      margin-bottom: 20px;
+    }
+
+    &:hover {
+      color: #5f5c70;
+    }
+
+    &:active {
+        opacity: 0.5;
+    }
+  }
+
+  .menu-toggle {
+    position: absolute;
+    top: 40px;
+    right: 20px;
+    width: 30px;
+    height: 16px;
+    cursor: pointer;
+    transition: 0.5s all;
+
+    .menu-toggle__element {
+      display: block;
+      position: relative;
+      width: 100%;
+      height: 2px;
+      background-color: #31353B;
+
+      &::before,
+      &::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        width: 100%;
+        height: 2px;
+        background-color: #31353B;
+      }
+
+      &::before {
+        top: 8px;
+      }
+
+      &::after {
+        top: 16px;
+      }
+
+      &:hover,
+      &:hover::before,
+      &:hover::after {
+        background-color: #5f5c70;
+      }
+
+      &:active,
+      &:active::before,
+      &:active::after {
+        opacity: 0.5;
+      }
+    }
+  }
+
+  .menu {
+    .menu__list {
+      column-gap: 46px;
+    }
+
+    .menu__link {
+      text-decoration: none;
+      font-weight: 700;
+      font-size: 13px;
+      line-height: 130.8%;
+      color: #000000;
+      transition: 0.5s all;
+
+      &:hover {
+        color: #5f5c70;
+      }
+
+      &:active {
+        opacity: 0.5;
+      }
+    }
+  }
+
+  @media (max-width: $md-width) {
+    .menu {
+      .menu__list {
+        &--open {
+          position: absolute;
+          top: 100px;
+          left: 0;
+          width: 100%;
+          column-gap: 0;
+
+          &:first-child {
+            border-top: 1px solid #DADADA;
+
+          }
+        }
+      }
+
+      .menu__item {
+        &--open {
+          padding: 10px 50px;
+          border-bottom: 1px solid #DADADA;
+        }
+      }
+
+      .menu__link {
+        &--open {
+          
+          font-weight: 400;
+          font-size: 16px;
+          line-height: 130.8%;
+          color: #000000;
+        }
+      }
+    }
+  }
+}
 
 </style>
