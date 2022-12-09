@@ -1,14 +1,18 @@
 <template>
     <main>
         <PromoApp />
+        <InstructionApp />
+        <DealsApp />
     </main>
 </template>
 
 <script>
+import InstructionApp from './main/InstructionApp.vue';
 import PromoApp from './main/PromoApp.vue';
-export default {
-    components: {PromoApp},
+import DealsApp from './main/DealsApp.vue';
 
+export default {
+    components: { PromoApp, InstructionApp, DealsApp },
 }
 </script>
 
