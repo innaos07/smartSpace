@@ -4,7 +4,7 @@
     <div class="partners__list d-flex align-items-center">
       <div 
         class="partners__item" 
-        v-for="item in PartnerList" :key="item.img">
+        v-for="item in partnerList" :key="item.img">
         <img :src="require(`@/assets/img/${item.img}.svg`)"/>
       </div>
     </div>
@@ -13,10 +13,10 @@
 
 <script>
 export default {
-  name: 'PromoItemApp',
+  name: 'PromoItemBlock',
   data() {
     return {
-      PartnerList: [
+      partnerList: [
         {name: "", img: "partner-01"},
         {name: "", img: "partner-02"},
         {name: "", img: "partner-03"},

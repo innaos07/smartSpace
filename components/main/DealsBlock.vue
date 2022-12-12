@@ -10,32 +10,32 @@
         </div>
 
         <div class="deals__center">
-            <DealsTabApp :deals__tabs="DealsTab" :isActive="isActive" @changeIsActive="changeIsActive($event)" />
+            <DealsTabBlock :deals__tabs="dealsTab" :isActive="isActive" @changeIsActive="changeIsActive($event)" />
         </div>
 
         <div class="deals__bottom">
-          <DealsListApp :deals__list="filteredDealsList"/>
+          <DealsListBlock :deals__list="filteredDealsList"/>
         </div>
     </div>
   </section>
 </template>
 
 <script>
-import DealsTabApp from './deals/DealsTabApp.vue';
-import DealsListApp from './deals/DealsListApp.vue';
+import DealsTabBlock from './deals/DealsTabBlock.vue';
+import DealsListBlock from './deals/DealsListBlock.vue';
 
 export default {
-    components: { DealsTabApp, DealsListApp },
+    components: { DealsTabBlock, DealsListBlock },
     data () {
         return {
             isActive: 12,
-            DealsTab: [
+            dealsTab: [
                 { name: 'Residential Property', link: '#', id: 12 },
                 { name: 'Commercial Property', link: '#', id: 23 },
                 { name: 'Agriculture Property', link: '#', id: 34 },
                 { name: 'Industrial Property', link: '#', id: 45 },
             ],
-            DealsList: [
+            dealsList: [
               { linkOne: '#', linkTwo: '#', linkImage: '#', img: 'home-01', id: 23, tag: 'Residential Property, Commercial Property'},
               { linkOne: '#', linkTwo: '#', linkImage: '#', img: 'home-02', id: 22, tag: 'Residential Property, Agriculture Property, Commercial Property'},
               { linkOne: '#', linkTwo: '#', linkImage: '#', img: 'home-03', id: 12, tag: 'Residential Property. Agriculture Property'},
@@ -51,8 +51,8 @@ export default {
     },
     computed: {
       filteredDealsList() {
-        let activeTags = this.DealsTab.filter(item => item.id == this.isActive)[0].name;
-        return this.DealsList.filter(item =>  item.tag?.includes(activeTags));
+        let activeTags = this.dealsTab.filter(item => item.id == this.isActive)[0].name;
+        return this.dealsList.filter(item =>  item.tag?.includes(activeTags));
       }
     }
 }

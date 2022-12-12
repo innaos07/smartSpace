@@ -1,8 +1,8 @@
 <template>
   <div>
-    <HeaderPage />
-    <MainPage />
-    <FooterPage />
+    <HeaderComponent />
+    <MainComponent />
+    <FooterComponent />
   </div>
 </template>
 

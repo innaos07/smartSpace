@@ -13,7 +13,7 @@
             align-items-center
             justify-content-center
           "
-          v-for="item in InstructionList"
+          v-for="item in instructionList"
           :key="item.title"
         >
           <div
@@ -49,7 +49,7 @@
 export default {
   data() {
     return {
-      InstructionList: [
+      instructionList: [
         {
           icon: "instruction-01",
           class: "item-instruction__image--purpure",

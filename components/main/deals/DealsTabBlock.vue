@@ -31,9 +31,6 @@ export default {
       default: 12,
     },
   },
-  mounted: function () {
-    console.log(this.isActive);
-  },
 };
 </script>
 

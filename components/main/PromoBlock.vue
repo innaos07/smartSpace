@@ -21,15 +21,15 @@
 
         <div class="col-6"></div>
       </div>
-     <PromoItemApp />
+     <PromoItemBlock />
     </div>
   </section>
 </template>
 
 <script>
-import PromoItemApp from './PromoItemApp.vue';
+import PromoItemBlock from './PromoItemBlock.vue';
 export default {
-  components: {PromoItemApp}
+  components: { PromoItemBlock }
 };
 </script>
 
