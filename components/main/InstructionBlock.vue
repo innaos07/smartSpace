@@ -143,9 +143,11 @@ export default {
     }
   }
 
-  @media (max-width: $md-width) {
+  @media(max-width: $lg-width) {
     padding: 60px 0;
+  }
 
+  @media (max-width: $md-width) {
     .instruction__body {
       row-gap: 30px;
     }
