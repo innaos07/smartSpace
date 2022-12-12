@@ -190,10 +190,10 @@ export default {
   }
 
   @media (max-width: $md-width) {
-    
-    .header__logo--open {
-        margin-bottom: 20px;
-    }
+    position: fixed; 
+    background-color: #fff;
+    box-shadow: 0px 0px 21px -8px rgba(34, 60, 80, 0.2);
+    z-index: 50000;
 
     .menu {
       .menu__list--open {
@@ -202,10 +202,11 @@ export default {
         left: 0;
         width: 100%;
         column-gap: 0;
+        background-color: #fff;
+        box-shadow: 0px 9px 5px -10px rgba(34, 60, 80, 0.2);
 
         &:first-child {
           border-top: 1px solid #DADADA;
-
         }
       }
 
