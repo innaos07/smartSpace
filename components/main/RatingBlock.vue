@@ -4,7 +4,7 @@
       class="rating__item"
       v-for="star in starsList"
       :key="star"
-      :class="item__rating >= star ? 'rating__item--active' : none"
+      :class="item__rating >= star ? 'rating__item--active' : ''"
     >
       <img src="@/assets/img/star.svg" alt="star" />
     </div>

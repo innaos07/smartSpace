@@ -21,7 +21,7 @@ import ReviewsItemBlock from "./reviews/ReviewsItemBlock.vue";
 import ReviewsFooterBlock from "./reviews/ReviewsFooterBlock.vue";
 
 export default {
-  components: { ReviewsItemBlock, ReviewsFooter },
+  components: { ReviewsItemBlock, ReviewsFooterBlock },
   data () {
     return {
       reviewsList: [

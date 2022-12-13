@@ -7,10 +7,9 @@
           href="#" 
           class="header__logo" 
           :class="{'header__logo--open' : isActive}"
-        >
+        > 
           SmartSpace
         </a>
-
         <div  
           class="header__toggle menu-toggle d-md-none" 
           @click="isActive = !isActive"
@@ -22,7 +21,7 @@
           <ul class="menu__list d-flex flex-wrap">
             <li 
               class="menu__item" 
-              v-for="item in MenuList" 
+              v-for="item in menuList" 
               :key="item.name"
             >
               <a href="item.link" class="menu__link">{{item.name}}</a>
@@ -36,7 +35,7 @@
             v-if="isActive" 
             :class="{'menu__list--open' : isActive}"
           >
-            <li class="menu__item" :class="{'menu__item--open' : isActive}" v-for="item in MenuList" :key="item.name">
+            <li class="menu__item" :class="{'menu__item--open' : isActive}" v-for="item in menuList" :key="item.name">
               <a href="item.link" class="menu__link" :class="{'menu__link--open' : isActive}">{{item.name}}</a>
             </li>
           </ul>
@@ -52,7 +51,7 @@ export default {
   data () {
     return {
       isActive: false,
-      MenuList: [
+      menuList: [
         {
           name: "Home",
           link: "#",
