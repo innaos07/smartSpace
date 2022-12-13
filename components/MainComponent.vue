@@ -4,6 +4,7 @@
         <InstructionBlock />
         <DealsBlock />
         <FeaturedBlock />
+        <ReviewsBlock />
     </main>
 </template>
 
@@ -12,9 +13,10 @@ import InstructionBlock from './main/InstructionBlock.vue';
 import PromoBlock from './main/PromoBlock.vue';
 import DealsBlock from './main/DealsBlock.vue';
 import FeaturedBlock from './main/FeaturedBlock.vue';
+import ReviewsBlock from './main/ReviewsBlock.vue';
 
 export default {
-    components: { PromoBlock, InstructionBlock, DealsBlock, FeaturedBlock },
+    components: { PromoBlock, InstructionBlock, DealsBlock, FeaturedBlock, ReviewsBlock },
 }
 </script>
 

@@ -177,12 +177,15 @@ export default {
         margin-bottom: 40px;
       }
     }
-    @media (max-width: $sm-width) {
-      padding: 30px 0;
 
+    @media (max-width: $md-width) {
       .featured__title {
         margin-bottom: 30px;
       }
+    }
+
+    @media (max-width: $sm-width) {
+      padding: 30px 0;
 
       .featured__body {
         padding-bottom: 40px;

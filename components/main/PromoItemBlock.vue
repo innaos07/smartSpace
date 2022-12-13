@@ -17,12 +17,12 @@ export default {
   data() {
     return {
       partnerList: [
-        {name: "", img: "partner-01"},
-        {name: "", img: "partner-02"},
-        {name: "", img: "partner-03"},
-        {name: "", img: "partner-04"},
-        {name: "", img: "partner-05"},
-        {name: "", img: "partner-06"},
+        { name: "partner-01", img: "partner-01" },
+        { name: "partner-02", img: "partner-02" },
+        { name: "partner-03", img: "partner-03" },
+        { name: "partner-04", img: "partner-04" },
+        { name: "partner-05", img: "partner-05" },
+        { name: "partner-06", img: "partner-06" },
       ],
     };
   },

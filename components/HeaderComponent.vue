@@ -6,7 +6,8 @@
         <a 
           href="#" 
           class="header__logo" 
-          :class="{'header__logo--open' : isActive}">
+          :class="{'header__logo--open' : isActive}"
+        >
           SmartSpace
         </a>
 

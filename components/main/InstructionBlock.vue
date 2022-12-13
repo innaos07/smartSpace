@@ -6,32 +6,13 @@
       </h2>
       <div class="instruction__body row">
         <div
-          class="
-            instruction__column
-            col-12 col-md-4
-            d-flex
-            align-items-center
-            justify-content-center
-          "
+          class="instruction__column col-12 col-md-4 d-flex align-items-center justify-content-center"
           v-for="item in instructionList"
           :key="item.title"
         >
-          <div
-            class="
-              instruction__item
-              item-instruction
-              d-flex
-              flex-column
-              align-items-center
-            "
-          >
-            <div
-              class="
-                item-instruction__image
-                d-flex
-                justify-content-center
-                align-items-center
-              "
+          <div class="instruction__item item-instruction d-flex flex-column align-items-center">
+            <div 
+              class="item-instruction__image d-flex justify-content-center align-items-center"
               :class="item.class"
             >
               <img :src="require(`@/assets/img/${item.icon}.svg`)" />
