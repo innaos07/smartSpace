@@ -13,6 +13,7 @@
             <img src="@/assets/img/featured-02.jpg" alt="featured-02" />
           </div>
         </div>
+
         <div class="featured__info info-featured col-12 col-lg-6 d-flex flex-column align-items-center align-items-lg-start">
           <h3 class="info-featured__title">
             The and collecting for <br class="d-lg-none" />
@@ -22,9 +23,10 @@
             Conveying or northward offending admitting perfectly my. Colonel
             gravity get thought fat smiling add but difficult situations.
           </p>
-          <div class="info-featured__options options-featured d-flex flex-wrap align-items-center justify-content-start">
+          
+          <div class="info-featured__options options-featured row">
             <div
-              class="options-featured__item d-flex flex-column"
+              class="options-featured__item col-6 col-sm-4 d-flex flex-column"
               v-for="item in optionsList"
               :key="item.title"
             >
@@ -120,12 +122,7 @@ export default {
 
   .options-featured {
     max-width: 410px;
-    column-gap: 80px;
     row-gap: 30px;
-
-    .options-featured__item {
-      flex: 1;
-    }
 
     .options-featured__title {
       margin-bottom: 12px;
@@ -140,6 +137,14 @@ export default {
     .info-featured {
       padding-top: 0;
       padding-left: 15px;
+
+      .info-featured__description {
+        margin-bottom: 30px;
+      }
+
+      .info-featured__options {
+        margin-bottom: 40px;
+      }
     }
   }
 
@@ -164,11 +169,6 @@ export default {
 
       .info-featured__description {
         max-width: 410px;
-        margin-bottom: 30px;
-      }
-
-      .info-featured__options {
-        margin-bottom: 40px;
       }
     }
 
