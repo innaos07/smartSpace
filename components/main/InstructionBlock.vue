@@ -15,7 +15,7 @@
               class="item-instruction__image d-flex justify-content-center align-items-center"
               :class="item.class"
             >
-              <img :src="require(`@/assets/img/${item.icon}.svg`)" />
+              <img :src="require(`@/assets/img/${ item.icon }.svg`)" />
             </div>
             <h3 class="item-instruction__title">{{ item.title }}</h3>
             <p class="item-instruction__description">{{ item.description }}</p>
@@ -68,6 +68,28 @@ export default {
     margin-bottom: 70px;
   }
 
+  .instruction__column {
+    position: relative;
+
+    &:not(:last-child)::after {
+      content: "";
+      position: absolute;
+      top: 39px;
+      right: -106px;
+      width: 212px;
+      height: 11px;
+      background-image: url('@/assets/img/border.svg');
+      background-repeat: no-repeat;
+      background-position: 0 0;
+      background-size: 100%;
+      z-index: 2000;
+    }
+
+    &:nth-child(2)::after {
+      transform: rotate(-180deg);
+    }
+  }
+
   .item-instruction {
     padding: 0 30px;
 
@@ -117,13 +139,31 @@ export default {
     }
   }
 
+  @media(max-width: $xl-width) {
+    .instruction__column:not(:last-child)::after {
+      right: -90px;
+      width: 180px;
+      height: 10px;
+    }
+  }
+
   @media(max-width: $lg-width) {
     padding: 60px 0;
+
+    .instruction__column:not(:last-child)::after {
+      right: -60px;
+      width: 120px;
+      height: 6px;
+    }
   }
 
   @media (max-width: $md-width) {
     .instruction__body {
       row-gap: 30px;
+    }
+
+    .instruction__column:not(:last-child)::after {
+      display: none;
     }
 
     .instruction__title {
