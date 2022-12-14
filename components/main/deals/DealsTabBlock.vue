@@ -84,7 +84,8 @@ export default {
         }
         
         &:hover,
-        &:active {
+        &:active,
+        &:focus {
           color: #f85a47;
         }
       }
