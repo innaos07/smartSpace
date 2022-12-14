@@ -76,8 +76,6 @@ export default {
         font-weight: 600;
         color: #f85a47;
 
-      
-
         &::before {
           width: 100%;
         }
