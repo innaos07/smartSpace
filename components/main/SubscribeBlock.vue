@@ -4,6 +4,7 @@
       <div class="subscribe__body d-flex flex-column align-items-center">
         <h2 class="subscribe__title">Get Our Newsletter</h2>
         <p class="subscribe__description">To join the worldwide community</p>
+        
         <form action="#" class="subscribe__form form-subscribe d-flex flex-column flex-md-row align-items-md-center">
           <div class="form-subscribe__content d-flex flex-column">
             <label for="subscribe" class="form-subscribe__label">Type your Email Address</label>
@@ -89,7 +90,8 @@ export default {
   }
 
   @media(max-width: $lg-width) {
-    padding: 60px 0;
+    padding-top: 60px;
+    padding-bottom: 80px;
   }
 
   @media(max-width: $md-width) {
@@ -113,7 +115,6 @@ export default {
 
   @media (max-width: $md-width) {
     padding-top: 30px;
-    padding-bottom: 60px;
   }
 }
 </style>

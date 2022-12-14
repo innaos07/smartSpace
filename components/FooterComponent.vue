@@ -18,6 +18,11 @@
               </ul>
             </nav>
           </div>
+
+          <div class="footer__social">
+            <SocialBlock />
+          </div>
+        
           <div class="footer__copy">
             Copyright © 2021 AR Shakir . All Rights Reseved.
           </div>
@@ -28,7 +33,10 @@
 </template>
 
 <script>
+import SocialBlock from "./main/SocialBlock.vue";
+
 export default {
+  components: { SocialBlock },
   data() {
     return {
       menuFooterList: [
@@ -144,7 +152,13 @@ export default {
       column-gap: 30px;
       row-gap: 10px;
     }
-
   }
+
+  @media(max-width: $md-width) {
+    .footer__social {
+      margin-bottom: 20px;
+    }
+  }
+
 }
 </style>

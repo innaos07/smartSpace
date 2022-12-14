@@ -89,6 +89,10 @@ export default {
 
   @media (max-width: $md-width) {
     padding-top: 10px;
+
+    .reviews__list {
+      margin-bottom: 30px;
+    }
   }
 
   @media (max-width: $sm-width) {
