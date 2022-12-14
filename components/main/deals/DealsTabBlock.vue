@@ -51,6 +51,7 @@ export default {
       font-size: 19px;
       line-height: 136.8%;
       color: #333333;
+      transition: color 0.5s;
 
       &::before {
         content: "";
@@ -63,8 +64,10 @@ export default {
         transition: width 0.5s ease 0s;
       }
 
-      &:hover {
-        color: #5f5c70;
+      &:hover,
+      &:focus {
+        outline: none;
+        color: #c4bbbb;
       }
 
       &:active {

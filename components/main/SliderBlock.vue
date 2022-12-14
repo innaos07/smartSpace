@@ -8,7 +8,7 @@
           class="slider__item" 
           :class="slider__list[count-1] == slider__list[index] ? 'slider__item--current': ''"
         >
-          <img :src="require(`@/assets/img/${item.img}.jpg`)" />
+          <img :src="require(`@/assets/img/${item.img}.jpg`)" :alt="item.name"/>
         </div>
       </div>
 
@@ -93,15 +93,18 @@ export default {
     background-position: 0 0;
     background-size: 100%;
     cursor: pointer;
+    transition: all 0.5s;
 
     &--prev {
       transform: rotate(-180deg);
     }
 
-    &:hover {
-      filter: brightness(0) saturate(100%)
-              invert(79%) sepia(5%) saturate(672%) 
-              hue-rotate(175deg) brightness(82%) contrast(91%);    
+    &:hover,
+    &:focus {
+      outline: none;
+      filter: brightness(0) saturate(100%) invert(57%)
+              sepia(43%) saturate(5848%) hue-rotate(332deg) 
+              brightness(98%) contrast(98%);
     }
 
     &:active {

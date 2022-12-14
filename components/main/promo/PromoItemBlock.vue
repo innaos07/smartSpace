@@ -5,7 +5,7 @@
       <div 
         class="partners__item col-6 col-sm-4 col-md-2 d-flex align-items-center justify-content-center justify-content-md-start" 
         v-for="item in partnerList" :key="item.img">
-        <img :src="require(`@/assets/img/${item.img}.svg`)"/>
+        <img :src="require(`@/assets/img/${item.img}.svg`)" :alt="item.name"/>
       </div>
     </div>
   </div>

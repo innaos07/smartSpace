@@ -1,6 +1,52 @@
 @import "variables";
 @import "bootstrap/dist/css/bootstrap.css";
 
+
+@font-face {
+  font-family: 'Manrope';
+  src: url('~assets/fonts/Manrope-ExtraBold.woff2') format('woff2'),
+      url('~assets/fonts/Manrope-ExtraBold.woff') format('woff');
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Manrope';
+  src: url('~assets/fonts/Manrope-Medium.woff2') format('woff2'),
+      url('~assets/fonts/Manrope-Medium.woff') format('woff');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Manrope';
+  src: url('~assets/fonts/Manrope-Bold.woff2') format('woff2'),
+      url('~assets/fonts/Manrope-Bold.woff') format('woff');
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Manrope';
+  src: url('~assets/fonts/Manrope-Regular.woff2') format('woff2'),
+      url('~assets/fonts/Manrope-Regular.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Manrope';
+  src: url('~assets/fonts/Manrope-SemiBold.woff2') format('woff2'),
+      url('~assets/fonts/Manrope-SemiBold.woff') format('woff');
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
 img {
   max-width: 100%;
   height: auto;
@@ -21,7 +67,7 @@ li {
 body {
   height: 100%;
   line-height: 1;
-  font-family: "Montserrat", Arial, sans-sarif;
+  font-family: 'Manrope', Arial, sans-sarif;
   font-size: 16px;
   font-weight: 400;
   color: #333333;
@@ -39,7 +85,7 @@ body {
   letter-spacing: 0.02em;
   color: #ffffff;
   background: #f85a47;
-  transition: 0.5s all;
+  transition: all 0.5s;
   box-shadow: 0px 100px 80px rgba(248, 90, 71, 0.07),
     0px 64.8148px 46.8519px rgba(248, 90, 71, 0.0531481),
     0px 38.5185px 25.4815px rgba(248, 90, 71, 0.0425185),
@@ -47,7 +93,8 @@ body {
     0px 8.14815px 6.51852px rgba(248, 90, 71, 0.0274815),
     0px 1.85185px 3.14815px rgba(248, 90, 71, 0.0168519);
 
-  &:hover {
+  &:hover,
+  &:focus {
     background: #ff4530;
     color: #ffffff;
   }

@@ -10,8 +10,8 @@
           <a :href="item.linkOne" class="options__link">featured</a>
           <a :href="item.linkTwo" class="options__link">3D</a>
         </div>
-        <a :href="item.linkImage" class="items-deals__image">
-          <img :src="require(`@/assets/img/${item.img}.jpg`)" />
+        <a :href="item.linkImage" class="items-deals__link">
+          <img :src="require(`@/assets/img/${item.img}.jpg`)" :alt="item.img" />
         </a>
       </div>
     </div>
@@ -58,24 +58,42 @@ export default {
       color: #ffffff;
       background: rgba(0, 0, 0, 0.4);
       text-decoration: none;
+      transition: all 0.5s;
+
+      &:hover,
+      &:focus {
+        outline: none;
+        color: #f85a47;
+      }
+
+      &:active {
+        color: #c4bbbb;
+      }
     }
   }
 
-  .items-deals__image {
+  .items-deals__link {
     display: block;
     border-radius: 5px;
     overflow: hidden;
+    transition: all 0.5s;
 
-    &:hover img {
-      transform: scale(1.1);
+    &:hover,
+    &:focus {
+      outline: none;
+      border: 1px solid #c4bbbb; 
     }
   }
 
-  .items-deals__image img {
+  .items-deals__link img {
     width: 100%;
     height: 100%;
     object-fit: cover;
     transition: transform 0.5s ease 0.1s;
+
+    &:hover {
+      transform: scale(1.1);
+    }
   }
 
   @media (max-width: $md-width) {

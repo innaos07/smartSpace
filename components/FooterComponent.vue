@@ -13,7 +13,7 @@
                   v-for="item in menuFooterList"
                   :key="item.name"
                 >
-                  <a href="item.link" class="menu-footer__link">{{ item.name }}</a>
+                  <a :href="item.link" class="menu-footer__link">{{ item.name }}</a>
                 </li>
               </ul>
             </nav>
@@ -116,12 +116,14 @@ export default {
       color: #000000;
       transition: 0.5s all;
 
-      &:hover {
-        color: #5f5c70;
+      &:hover,
+      &:focus {
+        color: #f85a47;
+        outline: none;
       }
 
       &:active {
-        opacity: 0.5;
+          opacity: 0.5;
       }
     }
   }

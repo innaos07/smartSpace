@@ -15,7 +15,7 @@
               class="item-instruction__image d-flex justify-content-center align-items-center"
               :class="item.class"
             >
-              <img :src="require(`@/assets/img/${ item.icon }.svg`)" />
+              <img :src="require(`@/assets/img/${ item.icon }.svg`)" :alt="item.title"/>
             </div>
             <h3 class="item-instruction__title">{{ item.title }}</h3>
             <p class="item-instruction__description">{{ item.description }}</p>

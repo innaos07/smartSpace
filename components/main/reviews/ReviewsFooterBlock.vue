@@ -54,6 +54,15 @@ export default {
     .footer-reviews__link {
       font: inherit;
       text-decoration: underline;
+
+      &:hover,
+      &:focus {
+        color: #c4bbbb;
+      }
+
+      &:active {
+        opacity: 0.5;
+      }
     }
   }
 

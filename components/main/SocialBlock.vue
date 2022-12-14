@@ -38,7 +38,7 @@ export default {
   top: 50%;
   right: 10px;
   gap: 25px;
-  z-index: 100000;
+  z-index: 4000;
   transform: translate(0px, -50%);
 
   .social__link {

@@ -24,7 +24,7 @@
               v-for="item in menuList" 
               :key="item.name"
             >
-              <a href="item.link" class="menu__link">{{item.name}}</a>
+              <a :href="item.link" class="menu__link">{{item.name}}</a>
             </li>
           </ul>
         </nav>
@@ -76,7 +76,6 @@ export default {
           name: "Contact",
           link: "#",
         },
-
       ],
     }
   }
@@ -106,10 +105,12 @@ export default {
     font-size: 23px;
     line-height: 134.8%;
     color: #31353B;
-    transition: 0.5s all;
+    transition: all 0.5s;
 
-    &:hover {
-      color: #5f5c70;
+    &:hover,
+    &:focus {
+      color: #f85a47;
+      outline: none;
     }
 
     &:active {
@@ -132,6 +133,7 @@ export default {
       width: 100%;
       height: 2px;
       background-color: #31353B;
+      transition: all 0.5s;
 
       &::before,
       &::after {
@@ -141,6 +143,7 @@ export default {
         width: 100%;
         height: 2px;
         background-color: #31353B;
+        transition: all 0.5s;
       }
 
       &::before {
@@ -153,8 +156,11 @@ export default {
 
       &:hover,
       &:hover::before,
-      &:hover::after {
-        background-color: #5f5c70;
+      &:hover::after,
+      &:focus,
+      &:focus::before,
+      &:focus::after {
+        background-color: #f85a47;
       }
 
       &:active,
@@ -178,8 +184,10 @@ export default {
       color: #000000;
       transition: 0.5s all;
 
-      &:hover {
-        color: #5f5c70;
+      &:hover,
+      &:focus {
+        outline: none;
+        color: #f85a47;
       }
 
       &:active {
@@ -210,11 +218,12 @@ export default {
       }
 
       .menu__item--open {
-        padding: 10px 50px;
         border-bottom: 1px solid #DADADA;
       }
 
-      .menu__link-open {
+      .menu__link--open {
+        display: block;
+        padding: 10px 50px;
         font-weight: 400;
         font-size: 16px;
         line-height: 130.8%;
