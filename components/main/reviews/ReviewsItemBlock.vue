@@ -52,11 +52,12 @@ export default {
   border-radius: 10px;
   transition: all 0.5s;
 
-  &:hover {
+  &:hover,
+  &:focus {
     text-decoration: none;
     color: #333333;
-    border: none;
     opacity: 0.6;
+    outline: none;
     box-shadow: 0px 100px 80px rgba(0, 0, 0, 0.03),
       0px 64.8148px 46.8519px rgba(0, 0, 0, 0.0227778),
       0px 38.5185px 25.4815px rgba(0, 0, 0, 0.0182222),
@@ -68,12 +69,7 @@ export default {
 
   &:active {
     opacity: 1;
-  }
-
-  &:focus {
-    outline: none;
-    border: 1px solid #333333;
-  }
+  } 
 
   .item-reviews__rating {
     margin-bottom: 35px;

@@ -48,15 +48,17 @@ export default {
     z-index: 20000;
 
     .options__link {
+      display: block;
       height: 26px;
       padding: 6px 12px;
       border: 1px solid #ffffff;
       border-radius: 5px;
       font-size: 12px;
-      line-height: 125%;
+      line-height: 1;
       text-align: center;
       color: #ffffff;
       background: rgba(0, 0, 0, 0.4);
+      vertical-align: middle;
       text-decoration: none;
       transition: all 0.5s;
 
@@ -78,7 +80,6 @@ export default {
     overflow: hidden;
     transition: all 0.5s;
 
-    &:hover,
     &:focus {
       outline: none;
       border: 1px solid #c4bbbb; 

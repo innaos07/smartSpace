@@ -93,8 +93,10 @@ export default {
     color: #31353b;
     transition: 0.5s all;
 
-    &:hover {
-      color: #5f5c70;
+    &:hover,
+    &:focus {
+      color: #f85a47;
+      outline: none;
     }
 
     &:active {
