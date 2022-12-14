@@ -1,9 +1,9 @@
 <template>
   <div class="partners">
     <p class="partners__title">Our Amazing Partners</p>
-    <div class="partners__list d-flex align-items-center">
+    <div class="partners__list row">
       <div 
-        class="partners__item" 
+        class="partners__item col-6 col-sm-4 col-md-2 d-flex align-items-center justify-content-center justify-content-md-start" 
         v-for="item in partnerList" :key="item.img">
         <img :src="require(`@/assets/img/${item.img}.svg`)"/>
       </div>
@@ -30,14 +30,14 @@ export default {
 </script>
 
 <style lang="scss">
-@import "bootstrap/dist/css/bootstrap.css";
-@import "@/assets/css/main.scss";
+@import "@/assets/css/variables.scss";
 
 .partners {
   position: relative;
   z-index: 20000;
 
   .partners__title {
+    margin-bottom: 30px;
     font-size: 17px;
     line-height: 135%;
     letter-spacing: 0.01em;
@@ -45,7 +45,13 @@ export default {
   }
 
   .partners__list {
-    column-gap: 50px;
+    row-gap: 20px;
+  }
+
+  @media (max-width: $md-width) {
+    .partners__title {
+      text-align: center;
+    }
   }
 }
 </style>

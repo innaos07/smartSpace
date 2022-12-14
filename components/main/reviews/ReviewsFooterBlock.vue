@@ -36,6 +36,7 @@ export default {
 
 <style lang="scss">
 @import "@/assets/css/variables.scss";
+
 .footer-reviews {
   .partners-footer-reviews {
     flex: 1;

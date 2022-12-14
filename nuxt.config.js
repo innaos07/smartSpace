@@ -28,8 +28,6 @@ export default {
   // Global CSS: https://go.nuxtjs.dev/config-css
   css: [
     '@/node_modules/normalize-css/normalize.css',
-    // CSS file in the project
-    '@/assets/css/main.css',
     // SCSS file in the project
     '@/assets/css/main.scss'
   ],

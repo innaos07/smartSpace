@@ -64,6 +64,7 @@ export default {
 
 <style lang="scss">
 @import "@/assets/css/variables.scss";
+
 .footer {
 
   .footer__body {

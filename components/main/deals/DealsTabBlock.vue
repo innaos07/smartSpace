@@ -1,5 +1,5 @@
 <template>
-  <ul class="deals__tabs tabs d-flex flex-column flex-md-row align-items-center">
+  <ul class="deals__tabs tabs d-flex flex-column flex-lg-row align-items-center">
     <li
       class="tabs__item"
       v-for="item in deals__tabs"
@@ -9,7 +9,7 @@
       <button
        type="button"
         class="tabs__btn"
-        :class="isActive === item.id ? 'tabs__btn--current' : null"
+        :class="isActive === item.id ? 'tabs__btn--current' : ''"
       >
         {{ item.name }}
       </button>
@@ -36,8 +36,7 @@ export default {
 
 
 <style lang="scss">
-@import "bootstrap/dist/css/bootstrap.css";
-@import "@/assets/css/main.scss";
+@import "@/assets/css/variables.scss";
 
 .deals__tabs {
   column-gap: 55px;

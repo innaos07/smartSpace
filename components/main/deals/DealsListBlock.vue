@@ -1,7 +1,7 @@
 <template>
   <div class="deals__list row">
     <div
-      class="deals__column col-12 col-md-4 d-flex justify-content-center"
+      class="deals__column col-12 col-lg-4 d-flex justify-content-center"
       v-for="item in deals__list"
       :key="item.id"
     >
@@ -32,8 +32,7 @@ export default {
 </script>
 
 <style lang="scss">
-@import "bootstrap/dist/css/bootstrap.css";
-@import "@/assets/css/main.scss";
+@import "@/assets/css/variables.scss";
 
 .deals__list {
   row-gap: 30px;

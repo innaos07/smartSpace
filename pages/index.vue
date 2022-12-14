@@ -11,3 +11,8 @@ export default {
   name: 'IndexPage'
 }
 </script>
+
+<style lang="scss">
+@import "@/assets/css/main.scss";
+
+</style>

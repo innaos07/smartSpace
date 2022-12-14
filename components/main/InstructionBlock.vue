@@ -6,7 +6,7 @@
       </h2>
       <div class="instruction__body row">
         <div
-          class="instruction__column col-12 col-md-4 d-flex align-items-center justify-content-center"
+          class="instruction__column col-12 col-md-4 d-flex align-items-start justify-content-center"
           v-for="item in instructionList"
           :key="item.title"
         >
@@ -59,20 +59,13 @@ export default {
 </script>
 
 <style lang="scss">
-@import "bootstrap/dist/css/bootstrap.css";
-@import "@/assets/css/main.scss";
+@import "@/assets/css/variables.scss";
 
 .instruction {
   padding: 110px 0;
 
   .instruction__title {
     margin-bottom: 70px;
-  }
-
-  .instruction__column {
-    &:first-child {
-      opacity: 0.2;
-    }
   }
 
   .item-instruction {
@@ -137,14 +130,12 @@ export default {
       margin-bottom: 40px;
     }
 
-    .instruction__column {
-      &:first-child {
-        opacity: 1;
-      }
-    }
-
     .item-instruction {
       max-width: 320px;
+
+      .item-instruction__image {
+        margin-bottom: 30px;
+      }
     }
   }
 
