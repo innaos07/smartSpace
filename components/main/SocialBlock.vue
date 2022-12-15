@@ -42,8 +42,6 @@ export default {
   transform: translate(0px, -50%);
 
   .social__link {
-    transition: all 0.5s;
-
     &:hover,
     &:focus {
       outline: none;

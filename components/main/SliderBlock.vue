@@ -93,7 +93,6 @@ export default {
     background-position: 0 0;
     background-size: 100%;
     cursor: pointer;
-    transition: all 0.5s;
 
     &--prev {
       transform: rotate(-180deg);
