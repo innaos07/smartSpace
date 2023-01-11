@@ -1,5 +1,5 @@
 <template>
-  <section class="header">
+  <header class="header">
     <div class="header__body">
       <div class="container">
       <div class="header__content d-flex justify-content-md-between align-items-center">
@@ -43,7 +43,7 @@
       </div>    
     </div>
   </div>
-  </section>
+  </header>
 </template>
 
 <script>
