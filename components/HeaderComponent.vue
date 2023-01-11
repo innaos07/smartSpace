@@ -2,7 +2,7 @@
   <section class="header">
     <div class="header__body">
       <div class="container">
-      <div class="header__content d-flex flex-column flex-md-row justify-content-md-between align-items-center">
+      <div class="header__content d-flex justify-content-md-between align-items-center">
         <a 
           href="#" 
           class="header__logo" 
@@ -41,7 +41,7 @@
           </ul>
         </nav>
       </div>    
-      </div>
+    </div>
   </div>
   </section>
 </template>
@@ -119,24 +119,17 @@ export default {
   }
 
   .menu-toggle {
-    position: absolute;
-    top: 40px;
-    right: 20px;
+    position: relative;
     width: 30px;
     height: 16px;
-    cursor: pointer;
+    cursor: pointer;  
     transition: 0.5s all;
+    margin-left: auto;
 
-    .menu-toggle__element {
-      display: block;
-      position: relative;
-      width: 100%;
-      height: 2px;
-      background-color: #31353B;
-      transition: all 0.5s;
 
       &::before,
-      &::after {
+      &::after, 
+      span {
         content: "";
         position: absolute;
         left: 0;
@@ -154,21 +147,20 @@ export default {
         top: 16px;
       }
 
-      &:hover,
+      &:hover span,
       &:hover::before,
-      &:hover::after,
-      &:focus,
+      &:hover::after, 
+      &:focus span,
       &:focus::before,
       &:focus::after {
         background-color: #f85a47;
       }
 
-      &:active,
+      &:active span,
       &:active::before,
       &:active::after {
         opacity: 0.5;
       }
-    }
   }
 
   .menu {
